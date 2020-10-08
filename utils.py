@@ -140,15 +140,22 @@ def mapped(index):
         for dex in Index.readlines():
             dex = dex.strip('\n')
             if dex == index:
-                print(cnt)
                 break
             cnt += 1
+    print(cnt)
     Index.close()
     cnt += 1
     charaList = os.listdir('./child/')
     charaList.remove('childIndex.txt')  # 注意文件列表中还有这个.txt，必须要remove掉否则会影响映射
-    chara = charaList[cnt // 9]
-    chara_sub = '_sub' + str(cnt % 9) + '.png'
+    # 需要防止越界，如果恰好被9整除的话，应归属上一个字母的最后一张（sub9）
+    if cnt % 9 == 0:
+        charaIndex = cnt // 9 - 1
+        _subIndex = 9
+    else:
+        charaIndex = cnt // 9
+        _subIndex = cnt % 9
+    chara = charaList[charaIndex]
+    chara_sub = '_sub' + str(_subIndex) + '.png'
     origImgPath = os.path.join('./child', chara, chara_sub)
     print("The original image is : ", origImgPath)
     # img = cv2.imread(origImgPath)
@@ -188,8 +195,8 @@ def produceChildImg():
             cv2.imwrite('./child/' + imgPath.split('.')[0] + '/' + '_sub' + str(cnt) + '.png', img)
 
 
-if __name__ == '__main__':
-
+# if __name__ == '__main__':
+def getSequence():
     # interface('test')
 
     testIndex = countImg('./test.png')
@@ -203,15 +210,51 @@ if __name__ == '__main__':
 
     testBlocks = count("./imgsClipped/test")
     origBlocks = count('./imgsClipped/' + str(origImgPath).split('\\')[-1].split('.')[0])
+    # zero = testBlocks.index(255)
+    # # 在返回的时候不能简单编号，因为"0"必须在空白处
+    # res = []
+    # for item in origBlocks:
+    #     res.append(str(testBlocks.index(item)))
+    #
+    # org = [i for i in '012345678']
+    # temp = org[zero]
+    # org[zero] = '0'
+    # org[0] = temp
+    # # org : ['2', '1', '0', '3', '4', '5', '6', '7', '8']
+    # # print(org)
+    #
+    # ta = res.index('0')
+    # tb = res.index(temp)
+    # res[ta] = temp
+    # res[tb] = '0'
+    # print(res)
+    # packUp = [''.join(org), ''.join(res)]
+    # print(packUp)
 
-    res = ''
+    # ----------------------------------
+    origT = []
+    testT = []
+    cnt = 1
     for item in origBlocks:
-        res += str(testBlocks.index(item))
-    print(res)
-
+        if item == 255:
+            origT.append(0)
+        else:
+            origT.append(cnt)
+            cnt += 1
+    # print(origT)
+    for item in testBlocks:
+        testT.append(origT[origBlocks.index(item)])
+    # print(testT)
+    packUp = [''.join([str(i) for i in origT]), ''.join([str(j) for j in testT])]
+    print(packUp)
+    return [packUp]
     # preprocess function:
     # produceChildImg() # git clone后第一次运行代码请用该函数预处理原图片
     # countImgs('./child/') # 已得到childIndex，不必重复运行此函数
+
+
+if __name__ == '__main__':
+    res = getSequence()
     '''
     log:20201007---->>>>>
         一个晚上图片的识别还是没有完成
@@ -238,4 +281,15 @@ if __name__ == '__main__':
         62.933141975308644属于图片002.png，对应child/O_/_sub8.png
             其在childIndex中第为161行，floor(161/9) = 17，161%9 = 8
             (child文件夹序列第17个（0开始计数）-->>"./O_/";第8张图片(0开始计数)-->>"/_sub8.jpg")
+    
+    log:20201008/17:15----->>>>>
+        已经完成对get到的测试图片的识别
+        并比对原图，返回相应的九片图片的编号
+        下一步将与ai结合（应该很快完成这部分）
+        另外就是让ai输出wasd序列，并且返回post（界面gui的设计先放着）
+    
+    lpg:20201008/20:55----->>>>>>
+        ai有问题，难搞
+        输入的原图和乱图的序列可能需要调整
+        只能明天解决了
     '''
