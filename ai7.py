@@ -4,6 +4,7 @@
 # @Email   : 578450426@qq.com
 # 初始状态
 import numpy as np
+
 """
  由于 0 是空格，因此我们在考虑状态的逆序对问题的时候，就不需要考虑 0 对逆序对数量的影响。
  也就是说我们只需要考虑：把整个3*3矩阵去掉 0 之后写成一个序列，这个序列逆序对的数量，以及两个状态的逆序对奇偶性是否相同。
@@ -17,23 +18,15 @@ import numpy as np
 
  因此，用归纳法我们可以证明：只要两个状态的序列逆序对奇偶性相同，他们就一定互相可达；否则一定互相不可达，因为交换 0 并不影响逆序对的奇偶性。
 """
-init_state = [
-    [7, 5, 4],
-    [6, 1, 0],
-    [2, 3, 8]
-]
-# 目标状态
-goal_state = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 0]
-]
+
 # 目标状态 值-位置表
 goal_dic = {
     1: (0, 0), 2: (0, 1), 3: (0, 2),
     4: (1, 0), 5: (1, 1), 6: (1, 2),
     7: (2, 0), 8: (2, 1), 0: (2, 2)
 }
+# 启发值列表
+actiValue = []
 
 
 # 输出状态
@@ -171,14 +164,16 @@ def AStar(init, goal):
         for act in GetActions(node.state):
             # 获取此操作下到达的状态节点并将其加入边缘队列中
             near = Node(act(node.state), node.step + 1, act, node)
+
             if toInt(near.state) not in visit:
                 queue.append(near)
+
     return None, count
 
 
 # 将链表倒序，返回链头和链尾
 def reverse(node):
-    if node.parent == None:
+    if node.parent is None:
         return node, node
     head, rear = reverse(node.parent)
     rear.parent, node.parent = node, None
@@ -214,8 +209,94 @@ def Count(lst1, lst2, count):
     return res, count
 
 
-if __name__ == '__main__':
-    # init_state.remove(0)
+def ai(initState, goalState, swap, step):
+    global goal_state
+    global init_state
+    init_state = initState
+    goal_state = goalState
+    print(init_state, goal_state)
+    init_ = list(np.array(init_state).reshape(9).tolist())
+    goal_ = list(np.array(goal_state).reshape(9).tolist())
+    init_.remove(0)
+    goal_.remove(0)
+    _, init_IN = InversionNum(init_)
+    _, goal_IN = InversionNum(goal_)
+    if init_IN % 2 != goal_IN % 2:
+        print("无解")
+        print("进入强制交换")
+        temp = list(np.array(init_state).reshape(9).tolist())
+        t = temp[swap[0]]
+        temp[swap[0]] = temp[swap[1]]
+        temp[swap[1]] = t
+        print("After being swapped:", temp)
+        _, temp_IN = InversionNum(temp)
+        if temp_IN % 2 != goal_IN % 2:
+            print("强制交换后无解，进入手动交换")
+            init_state = list(np.array(temp).reshape(3, 3).tolist())
+            res = func(init_state, goal_state)
+            return res
+        print("搜索中：")
+        init_state = list(np.array(temp).reshape(3, 3).tolist())
+    node, count = AStar(init_state, goal_state)
+    if node is None:
+        print("无法从初始状态到达目标状态！")
+    else:
+        print("搜索成功，循环次数：", count)
+        node, rear = reverse(node)
+        count = 0
+        steps = []
+        first = 1
+        while node:
+            # 启发值包括从起点到此节点的距离
+
+            if first:
+                first = 0
+                node = node.parent
+                count += 1
+                continue
+            if step == count and swap[0] != swap[1]:  # count就是步数
+                init_state = sswap(swap, node)
+                res = func(init_state, goal_state)
+                return steps+res
+            print("第", count, "步：", node.action.__name__, "启发值为：", count, "+", node.value - count)
+            PrintState(node.state)
+            steps.append(node.action.__name__)
+            node = node.parent
+            count += 1
+        return steps
+
+
+def sswap(swap, node):
+    # 将node.State平展为一维后，由swap数组来交换顺序得到新的序列，从头执行ai()
+    state = np.array(node.state).reshape(9)
+    a = state[swap[0]]
+    b = state[swap[1]]
+    state[swap[0]] = b
+    state[swap[1]] = a
+    state = list(np.array(state).reshape(3, 3).tolist())
+    print("After being swapped: ")
+    print(state)
+    return state
+
+
+def _main():
+    #
+    step = 19
+    swap = [3, 2]
+    #
+    global goal_state
+    global init_state
+    init_state = [
+        [1, 8, 7],
+        [2, 4, 3],
+        [5, 6, 0]
+    ]
+    # 目标状态
+    goal_state = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8]
+    ]
     init_ = list(np.array(init_state).reshape(9).tolist())
     goal_ = list(np.array(goal_state).reshape(9).tolist())
     # goal_ = goal_.remove(0)
@@ -227,7 +308,17 @@ if __name__ == '__main__':
     print(init_IN, goal_IN)
     if init_IN % 2 != goal_IN % 2:
         print("无解")
-        exit()
+        print("进入强制交换")
+        temp = list(np.array(init_state).reshape(9).tolist())
+        t = temp[swap[0]]
+        temp[swap[0]] = temp[swap[1]]
+        temp[swap[1]] = t
+        _, temp_IN = InversionNum(temp)
+        if temp_IN % 2 != goal_IN % 2:
+            print("强制交换后无解，进入手动交换")
+            init_state = list(np.array(temp).reshape(3, 3).tolist())
+            res = func(init_state, goal_state)
+            return res
     node, count = AStar(init_state, goal_state)
     if node is None:
         print("无法从初始状态到达目标状态！")
@@ -235,9 +326,95 @@ if __name__ == '__main__':
         print("搜索成功，循环次数：", count)
         node, rear = reverse(node)
         count = 0
+        steps = []
+        first = 1
         while node:
             # 启发值包括从起点到此节点的距离
-            print("第", count + 1, "步：", node.action.__name__, "启发值为：", count, "+", node.value - count)
+            if first:
+                first = 0
+                node = node.parent
+                count += 1
+                continue
+            if step == count:  # count就是步数
+                init_state = sswap(swap, node)
+                res = func(init_state, goal_state)
+                return steps+res
+            print("第", count, "步：", node.action.__name__, "启发值为：", count, "+", node.value - count)
             PrintState(node.state)
+            steps.append(node.action.__name__)
             node = node.parent
             count += 1
+
+
+def func(init_state, goal_state):
+    init_ = list(np.array(init_state).reshape(9).tolist())
+    goal_ = list(np.array(goal_state).reshape(9).tolist())
+    init_.remove(0)
+    goal_.remove(0)
+    print(init_, goal_)
+    _, init_IN = InversionNum(init_)
+    _, goal_IN = InversionNum(goal_)
+    print(init_IN, goal_IN)
+    if init_IN % 2 != goal_IN % 2:
+        print("正在交换：")
+        init_state = finestSwap(init_state)
+        print("After being swapped BY HAND")
+        print(init_state)
+    node, count = AStar(init_state, goal_state)
+    if node is None:
+        print("无法从初始状态到达目标状态！")
+    else:
+        print("搜索成功，循环次数：", count)
+        node, rear = reverse(node)
+        count = 0
+        steps = []
+        first = 1
+        while node:
+            # 启发值包括从起点到此节点的距离
+
+            if first:
+                first = 0
+                node = node.parent
+                count += 1
+                continue
+            print("第", count, "步：", node.action.__name__, "启发值为：", count, "+", node.value - count)
+            PrintState(node.state)
+            steps.append(node.action.__name__)
+            node = node.parent
+            count += 1
+        return steps
+
+
+def finestSwap(state):
+    """
+
+    :param state:3*3 无解状态数组
+    :return: 3*3 根据启发值选取最优
+    """
+    init_ = list(np.array(state).reshape(9).tolist())
+    toswap = []
+    cur = 0
+    while cur < 8:
+        if init_[cur] != 0 and init_[cur + 1] != 0:
+            toswap.append([cur, cur+1])
+        cur += 1
+    # print(toswap)
+    swappedState = []
+    for item in toswap:
+        temp = [i for i in init_]
+        t = temp[item[0]]
+        temp[item[0]] = temp[item[1]]
+        temp[item[1]] = t
+        swappedState.append(list(np.array(temp).reshape(3, 3).tolist()))
+    # print(swappedState)
+    distances = []
+    for swapped in swappedState:
+        distances.append(GetDistance(swapped, goal_state))
+    res = swappedState[distances.index(min(distances))]
+    return res
+
+
+if __name__ == '__main__':
+    mmap = dict(zip(['MoveUp', 'MoveLeft', 'MoveDown', 'MoveRight'], ['w', 'a', 's', 'd']))
+    res = [mmap[i] for i in _main()]
+    print(res)

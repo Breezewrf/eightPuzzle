@@ -5,6 +5,8 @@ import cv2
 import numpy as np
 from numpy import *
 import os
+import json
+from ai7 import ai
 
 path = "./imgsSrc/"
 toPath = './imgsClipped/'
@@ -48,6 +50,21 @@ def interface(name):
     f.close()
     print("get test image successfully")
     print("saved to : ", './' + name + '.png')
+
+
+def interfaceJson(name):
+    te = requests.get("http://47.102.118.1:8089/api/problem?stuid=041801420")
+    te = eval(te.text)
+    img = base64.b64decode(te['img'])
+    step = te['step']
+    swap = te['swap']
+    uuid = te['uuid']
+    with open(name + '.png', 'wb') as f:
+        f.write(img)
+    f.close()
+    print("get test image successfully")
+    print("saved to : ", './' + name + '.png')
+    return step, swap, uuid
 
 
 def countImg(detectImg):
@@ -197,8 +214,7 @@ def produceChildImg():
 
 # if __name__ == '__main__':
 def getSequence():
-    # interface('test')
-
+    step, swap, uuid = interfaceJson('test')
     testIndex = countImg('./test.png')
     # origImgPath -> ./child\A_ (2)\_sub7.png
     origImgPath = str(mapped(testIndex))
@@ -245,16 +261,42 @@ def getSequence():
     for item in testBlocks:
         testT.append(origT[origBlocks.index(item)])
     # print(testT)
-    packUp = [''.join([str(i) for i in origT]), ''.join([str(j) for j in testT])]
-    print(packUp)
-    return [packUp]
+    # packUp = [''.join([str(i) for i in origT]), ''.join([str(j) for j in testT])]
+    print("orig: ", origT, '\n', "test:", testT)
+    print("swap at steps:", step)
+    swap[0] -= 1
+    swap[1] -= 1
+    print("to be swap:", swap)
+    return origT, testT, step, swap, uuid
     # preprocess function:
     # produceChildImg() # git clone后第一次运行代码请用该函数预处理原图片
     # countImgs('./child/') # 已得到childIndex，不必重复运行此函数
 
 
+def post(uuid, operation):
+    postUrl = 'http://47.102.118.1:8089/api/answer'
+    datas = {
+        "uuid": uuid,
+        "answer": {
+            "operations": operation,
+            "swap": [1, 2]
+        }
+    }
+    s = json.dumps(datas)
+    r = requests.post(postUrl, data=s)
+
+
 if __name__ == '__main__':
-    res = getSequence()
+    origT, testT, step, swap, uuid = getSequence()
+    o = np.array(origT).reshape(3, 3)
+    t = np.array(testT).reshape(3, 3)
+    o = list(o.tolist())
+    t = list(t.tolist())
+    mmap = dict(zip(['MoveUp', 'MoveLeft', 'MoveDown', 'MoveRight'], ['w', 'a', 's', 'd']))
+    res = [mmap[i] for i in ai(t, o, swap, step)]
+    print(res)
+    p = ''.join(res)
+    post(uuid, p)
     '''
     log:20201007---->>>>>
         一个晚上图片的识别还是没有完成
@@ -288,8 +330,27 @@ if __name__ == '__main__':
         下一步将与ai结合（应该很快完成这部分）
         另外就是让ai输出wasd序列，并且返回post（界面gui的设计先放着）
     
-    lpg:20201008/20:55----->>>>>>
+    log:20201008/20:55----->>>>>>
         ai有问题，难搞
         输入的原图和乱图的序列可能需要调整
         只能明天解决了
+        
+    log:20201009/21.29----->>>>>
+        庆幸今天搞完了八数码ai，已经可以输出正确的解体路径了
+        还差交换的问题，明天来弄：
+        def sswap(step, swap, node, s):
+        # 将node.State平展为一维后，由swap数组来交换顺序得到新的序列，从头执行ai()
+        虽然说这样可能比较耗时间，但是目前只能这样了
+        明天需要完成：
+            1、写完swap的函数
+            2、swap后如果无解还要根据启发值来确定又一次的交换
+            
+    log:20201010/23:05----->>>>>
+        又打了一个晚上代码。。好累
+        手腕都有点麻木了
+        作业多得一批，还要同时兼顾软件杯，明天还有实验，真897了
+        晚上改了swap的情况，如果一开始get到的图片就是无解，那么直接去swap，或者等到走到step了再swap
+        swap中包括判断强制交换是否有解，如果没有，需要手动交换
+        明天还要检查一下各个输出，看一下有没有bug
+        今天太累了不想看了
     '''
