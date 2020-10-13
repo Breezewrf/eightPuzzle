@@ -273,17 +273,20 @@ def getSequence():
     # countImgs('./child/') # 已得到childIndex，不必重复运行此函数
 
 
-def post(uuid, operation):
+def post(uuid, operation, swap):
     postUrl = 'http://47.102.118.1:8089/api/answer'
     datas = {
-        "uuid": uuid,
+        "uuid": str(uuid),
         "answer": {
-            "operations": operation,
-            "swap": [1, 2]
+            "operations": str(operation),
+            "swap": swap
         }
     }
     s = json.dumps(datas)
-    r = requests.post(postUrl, data=s)
+    print(s)
+    headers = {'Content-Type': 'application/json'}
+    r = requests.post(url=postUrl, headers=headers, data=s)
+    print(r.text)
 
 
 if __name__ == '__main__':
@@ -293,10 +296,13 @@ if __name__ == '__main__':
     o = list(o.tolist())
     t = list(t.tolist())
     mmap = dict(zip(['MoveUp', 'MoveLeft', 'MoveDown', 'MoveRight'], ['w', 'a', 's', 'd']))
-    res = [mmap[i] for i in ai(t, o, swap, step)]
+    steps, swapped = ai(t, o, swap, step)
+    res = [mmap[i] for i in steps]
     print(res)
     p = ''.join(res)
-    post(uuid, p)
+    if swapped[0] == -1:
+        swapped = swap
+    post(uuid, p, swapped)
     '''
     log:20201007---->>>>>
         一个晚上图片的识别还是没有完成

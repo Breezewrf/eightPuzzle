@@ -233,8 +233,8 @@ def ai(initState, goalState, swap, step):
         if temp_IN % 2 != goal_IN % 2:
             print("强制交换后无解，进入手动交换")
             init_state = list(np.array(temp).reshape(3, 3).tolist())
-            res = func(init_state, goal_state)
-            return res
+            res, swapped = func(init_state, goal_state)
+            return res, swapped
         print("搜索中：")
         init_state = list(np.array(temp).reshape(3, 3).tolist())
     node, count = AStar(init_state, goal_state)
@@ -254,20 +254,21 @@ def ai(initState, goalState, swap, step):
                 node = node.parent
                 count += 1
                 continue
-            if step == count and swap[0] != swap[1]:  # count就是步数
+            if step == count+1 and swap[0] != swap[1]:  # count就是步数
                 init_state = sswap(swap, node)
-                res = func(init_state, goal_state)
-                return steps+res
+                res, swapped = func(init_state, goal_state)
+                return steps + res, swapped
             print("第", count, "步：", node.action.__name__, "启发值为：", count, "+", node.value - count)
             PrintState(node.state)
             steps.append(node.action.__name__)
             node = node.parent
             count += 1
-        return steps
+        return steps, swap
 
 
 def sswap(swap, node):
     # 将node.State平展为一维后，由swap数组来交换顺序得到新的序列，从头执行ai()
+    print(node.state)
     state = np.array(node.state).reshape(9)
     a = state[swap[0]]
     b = state[swap[1]]
@@ -287,14 +288,14 @@ def _main():
     global goal_state
     global init_state
     init_state = [
-        [1, 8, 7],
-        [2, 4, 3],
-        [5, 6, 0]
+        [2, 3, 5],
+        [8, 4, 7],
+        [6, 0, 1]
     ]
     # 目标状态
     goal_state = [
-        [0, 1, 2],
-        [3, 4, 5],
+        [1, 2, 3],
+        [0, 4, 5],
         [6, 7, 8]
     ]
     init_ = list(np.array(init_state).reshape(9).tolist())
@@ -338,7 +339,7 @@ def _main():
             if step == count:  # count就是步数
                 init_state = sswap(swap, node)
                 res = func(init_state, goal_state)
-                return steps+res
+                return steps + res
             print("第", count, "步：", node.action.__name__, "启发值为：", count, "+", node.value - count)
             PrintState(node.state)
             steps.append(node.action.__name__)
@@ -357,9 +358,11 @@ def func(init_state, goal_state):
     print(init_IN, goal_IN)
     if init_IN % 2 != goal_IN % 2:
         print("正在交换：")
-        init_state = finestSwap(init_state)
+        init_state, swapped = finestSwap(init_state)
         print("After being swapped BY HAND")
         print(init_state)
+    else :
+        swapped = [-1, -1]
     node, count = AStar(init_state, goal_state)
     if node is None:
         print("无法从初始状态到达目标状态！")
@@ -382,7 +385,7 @@ def func(init_state, goal_state):
             steps.append(node.action.__name__)
             node = node.parent
             count += 1
-        return steps
+        return steps, swapped
 
 
 def finestSwap(state):
@@ -396,7 +399,7 @@ def finestSwap(state):
     cur = 0
     while cur < 8:
         if init_[cur] != 0 and init_[cur + 1] != 0:
-            toswap.append([cur, cur+1])
+            toswap.append([cur, cur + 1])
         cur += 1
     # print(toswap)
     swappedState = []
@@ -411,7 +414,7 @@ def finestSwap(state):
     for swapped in swappedState:
         distances.append(GetDistance(swapped, goal_state))
     res = swappedState[distances.index(min(distances))]
-    return res
+    return res, toswap[distances.index(min(distances))]
 
 
 if __name__ == '__main__':

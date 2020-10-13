@@ -10,9 +10,10 @@
     4、将此编号返回与ai算法相结合
 """
 from utils import interface, countImg
+
+
 def _main():
     pass
-
 
 
 if __name__ == '__main__':
