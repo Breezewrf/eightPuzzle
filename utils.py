@@ -275,6 +275,8 @@ def getSequence():
 
 def post(uuid, operation, swap):
     postUrl = 'http://47.102.118.1:8089/api/answer'
+    swap[0] += 1
+    swap[1] += 1
     datas = {
         "uuid": str(uuid),
         "answer": {

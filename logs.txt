@@ -1,0 +1,581 @@
+C:\Users\Breeze\AppData\Local\Programs\Python\Python37\python.exe C:/Users/Breeze/Desktop/soft_engi/Eight_puzzle/eightPuzzle/utils.py
+get test image successfully
+saved to :  ./test.png
+67.30575061728395
+97
+The original image is :  ./child\H_\_sub8.png
+./imgsClipped/test/
+(900, 900)
+./imgsClipped/_sub8/
+(900, 900)
+./imgsClipped/test\1.jpg
+./imgsClipped/test\2.jpg
+./imgsClipped/test\3.jpg
+./imgsClipped/test\4.jpg
+./imgsClipped/test\5.jpg
+./imgsClipped/test\6.jpg
+./imgsClipped/test\7.jpg
+./imgsClipped/test\8.jpg
+./imgsClipped/test\9.jpg
+./imgsClipped/_sub8\1.jpg
+./imgsClipped/_sub8\2.jpg
+./imgsClipped/_sub8\3.jpg
+./imgsClipped/_sub8\4.jpg
+./imgsClipped/_sub8\5.jpg
+./imgsClipped/_sub8\6.jpg
+./imgsClipped/_sub8\7.jpg
+./imgsClipped/_sub8\8.jpg
+./imgsClipped/_sub8\9.jpg
+orig:  [1, 2, 3, 4, 5, 6, 7, 0, 8]
+ test: [1, 4, 7, 0, 6, 2, 3, 5, 8]
+swap at steps: 3
+to be swap: [1, 5]
+[[1, 4, 7], [0, 6, 2], [3, 5, 8]] [[1, 2, 3], [4, 5, 6], [7, 0, 8]]
+无解
+进入强制交换
+After being swapped: [1, 2, 7, 0, 6, 4, 3, 5, 8]
+强制交换后无解，进入手动交换
+[1, 2, 7, 6, 4, 3, 5, 8] [1, 2, 3, 4, 5, 6, 7, 8]
+8 0
+搜索成功，循环次数： 2896
+第 1 步： MoveDown 启发值为： 1 + 14
+[1, 2, 7]
+[3, 6, 4]
+[0, 5, 8]
+第 2 步： MoveRight 启发值为： 2 + 14
+[1, 2, 7]
+[3, 6, 4]
+[5, 0, 8]
+第 3 步： MoveRight 启发值为： 3 + 12
+[1, 2, 7]
+[3, 6, 4]
+[5, 8, 0]
+第 4 步： MoveUp 启发值为： 4 + 14
+[1, 2, 7]
+[3, 6, 0]
+[5, 8, 4]
+第 5 步： MoveUp 启发值为： 5 + 14
+[1, 2, 0]
+[3, 6, 7]
+[5, 8, 4]
+第 6 步： MoveLeft 启发值为： 6 + 16
+[1, 0, 2]
+[3, 6, 7]
+[5, 8, 4]
+第 7 步： MoveDown 启发值为： 7 + 16
+[1, 6, 2]
+[3, 0, 7]
+[5, 8, 4]
+第 8 步： MoveDown 启发值为： 8 + 16
+[1, 6, 2]
+[3, 8, 7]
+[5, 0, 4]
+第 9 步： MoveRight 启发值为： 9 + 14
+[1, 6, 2]
+[3, 8, 7]
+[5, 4, 0]
+第 10 步： MoveUp 启发值为： 10 + 14
+[1, 6, 2]
+[3, 8, 0]
+[5, 4, 7]
+第 11 步： MoveLeft 启发值为： 11 + 16
+[1, 6, 2]
+[3, 0, 8]
+[5, 4, 7]
+第 12 步： MoveLeft 启发值为： 12 + 16
+[1, 6, 2]
+[0, 3, 8]
+[5, 4, 7]
+第 13 步： MoveDown 启发值为： 13 + 14
+[1, 6, 2]
+[5, 3, 8]
+[0, 4, 7]
+第 14 步： MoveRight 启发值为： 14 + 12
+[1, 6, 2]
+[5, 3, 8]
+[4, 0, 7]
+第 15 步： MoveRight 启发值为： 15 + 10
+[1, 6, 2]
+[5, 3, 8]
+[4, 7, 0]
+第 16 步： MoveUp 启发值为： 16 + 10
+[1, 6, 2]
+[5, 3, 0]
+[4, 7, 8]
+第 17 步： MoveLeft 启发值为： 17 + 10
+[1, 6, 2]
+[5, 0, 3]
+[4, 7, 8]
+第 18 步： MoveUp 启发值为： 18 + 10
+[1, 0, 2]
+[5, 6, 3]
+[4, 7, 8]
+第 19 步： MoveRight 启发值为： 19 + 8
+[1, 2, 0]
+[5, 6, 3]
+[4, 7, 8]
+第 20 步： MoveDown 启发值为： 20 + 6
+[1, 2, 3]
+[5, 6, 0]
+[4, 7, 8]
+第 21 步： MoveLeft 启发值为： 21 + 6
+[1, 2, 3]
+[5, 0, 6]
+[4, 7, 8]
+第 22 步： MoveLeft 启发值为： 22 + 6
+[1, 2, 3]
+[0, 5, 6]
+[4, 7, 8]
+第 23 步： MoveDown 启发值为： 23 + 4
+[1, 2, 3]
+[4, 5, 6]
+[0, 7, 8]
+第 24 步： MoveRight 启发值为： 24 + 2
+[1, 2, 3]
+[4, 5, 6]
+[7, 0, 8]
+['s', 'd', 'd', 'w', 'w', 'a', 's', 's', 'd', 'w', 'a', 'a', 's', 'd', 'd', 'w', 'a', 'w', 'd', 's', 'a', 'a', 's', 'd']
+{"uuid": "0577a520d252445c8c02df4184513c10", "answer": {"operations": "sddwwassdwaasddwawdsaasd", "swap": [1, 5]}}
+{"answer":"H","score":true,"time":2.7924842834472656}
+
+
+Process finished with exit code 0
+
+C:\Users\Breeze\AppData\Local\Programs\Python\Python37\python.exe C:/Users/Breeze/Desktop/soft_engi/Eight_puzzle/eightPuzzle/utils.py
+get test image successfully
+saved to :  ./test.png
+69.45843703703704
+150
+The original image is :  ./child\n_\_sub7.png
+./imgsClipped/test/
+(900, 900)
+./imgsClipped/_sub7/
+(900, 900)
+./imgsClipped/test\1.jpg
+./imgsClipped/test\2.jpg
+./imgsClipped/test\3.jpg
+./imgsClipped/test\4.jpg
+./imgsClipped/test\5.jpg
+./imgsClipped/test\6.jpg
+./imgsClipped/test\7.jpg
+./imgsClipped/test\8.jpg
+./imgsClipped/test\9.jpg
+./imgsClipped/_sub7\1.jpg
+./imgsClipped/_sub7\2.jpg
+./imgsClipped/_sub7\3.jpg
+./imgsClipped/_sub7\4.jpg
+./imgsClipped/_sub7\5.jpg
+./imgsClipped/_sub7\6.jpg
+./imgsClipped/_sub7\7.jpg
+./imgsClipped/_sub7\8.jpg
+./imgsClipped/_sub7\9.jpg
+orig:  [1, 2, 3, 4, 5, 6, 0, 7, 8]
+ test: [8, 1, 0, 2, 4, 7, 5, 6, 3]
+swap at steps: 0
+to be swap: [5, 0]
+[[8, 1, 0], [2, 4, 7], [5, 6, 3]] [[1, 2, 3], [4, 5, 6], [0, 7, 8]]
+无解
+进入强制交换
+After being swapped: [7, 1, 0, 2, 4, 8, 5, 6, 3]
+搜索中：
+搜索成功，循环次数： 570
+第 1 步： MoveLeft 启发值为： 1 + 18
+[7, 0, 1]
+[2, 4, 8]
+[5, 6, 3]
+第 2 步： MoveDown 启发值为： 2 + 18
+[7, 4, 1]
+[2, 0, 8]
+[5, 6, 3]
+第 3 步： MoveRight 启发值为： 3 + 16
+[7, 4, 1]
+[2, 8, 0]
+[5, 6, 3]
+第 4 步： MoveDown 启发值为： 4 + 14
+[7, 4, 1]
+[2, 8, 3]
+[5, 6, 0]
+第 5 步： MoveLeft 启发值为： 5 + 14
+[7, 4, 1]
+[2, 8, 3]
+[5, 0, 6]
+第 6 步： MoveUp 启发值为： 6 + 14
+[7, 4, 1]
+[2, 0, 3]
+[5, 8, 6]
+第 7 步： MoveLeft 启发值为： 7 + 14
+[7, 4, 1]
+[0, 2, 3]
+[5, 8, 6]
+第 8 步： MoveUp 启发值为： 8 + 14
+[0, 4, 1]
+[7, 2, 3]
+[5, 8, 6]
+第 9 步： MoveRight 启发值为： 9 + 12
+[4, 0, 1]
+[7, 2, 3]
+[5, 8, 6]
+第 10 步： MoveRight 启发值为： 10 + 10
+[4, 1, 0]
+[7, 2, 3]
+[5, 8, 6]
+第 11 步： MoveDown 启发值为： 11 + 8
+[4, 1, 3]
+[7, 2, 0]
+[5, 8, 6]
+第 12 步： MoveDown 启发值为： 12 + 6
+[4, 1, 3]
+[7, 2, 6]
+[5, 8, 0]
+第 13 步： MoveLeft 启发值为： 13 + 8
+[4, 1, 3]
+[7, 2, 6]
+[5, 0, 8]
+第 14 步： MoveLeft 启发值为： 14 + 8
+[4, 1, 3]
+[7, 2, 6]
+[0, 5, 8]
+第 15 步： MoveUp 启发值为： 15 + 8
+[4, 1, 3]
+[0, 2, 6]
+[7, 5, 8]
+第 16 步： MoveUp 启发值为： 16 + 8
+[0, 1, 3]
+[4, 2, 6]
+[7, 5, 8]
+第 17 步： MoveRight 启发值为： 17 + 6
+[1, 0, 3]
+[4, 2, 6]
+[7, 5, 8]
+第 18 步： MoveDown 启发值为： 18 + 4
+[1, 2, 3]
+[4, 0, 6]
+[7, 5, 8]
+第 19 步： MoveDown 启发值为： 19 + 2
+[1, 2, 3]
+[4, 5, 6]
+[7, 0, 8]
+第 20 步： MoveLeft 启发值为： 20 + 4
+[1, 2, 3]
+[4, 5, 6]
+[0, 7, 8]
+['a', 's', 'd', 's', 'a', 'w', 'a', 'w', 'd', 'd', 's', 's', 'a', 'a', 'w', 'w', 'd', 's', 's', 'a']
+{"uuid": "76e5fe14e3a54c24a62bb88a7ffa0840", "answer": {"operations": "asdsawawddssaawwdssa", "swap": [5, 0]}}
+{"answer":"n","score":true,"time":0.5951235294342041}
+
+
+Process finished with exit code 0
+
+------------------------weird-----------------------------
+C:\Users\Breeze\AppData\Local\Programs\Python\Python37\python.exe C:/Users/Breeze/Desktop/soft_engi/Eight_puzzle/eightPuzzle/utils.py
+get test image successfully
+saved to :  ./test.png
+72.24201975308642
+98
+The original image is :  ./child\H_\_sub9.png
+./imgsClipped/test/
+(900, 900)
+./imgsClipped/_sub9/
+(900, 900)
+./imgsClipped/test\1.jpg
+./imgsClipped/test\2.jpg
+./imgsClipped/test\3.jpg
+./imgsClipped/test\4.jpg
+./imgsClipped/test\5.jpg
+./imgsClipped/test\6.jpg
+./imgsClipped/test\7.jpg
+./imgsClipped/test\8.jpg
+./imgsClipped/test\9.jpg
+./imgsClipped/_sub9\1.jpg
+./imgsClipped/_sub9\2.jpg
+./imgsClipped/_sub9\3.jpg
+./imgsClipped/_sub9\4.jpg
+./imgsClipped/_sub9\5.jpg
+./imgsClipped/_sub9\6.jpg
+./imgsClipped/_sub9\7.jpg
+./imgsClipped/_sub9\8.jpg
+./imgsClipped/_sub9\9.jpg
+orig:  [1, 2, 3, 4, 5, 6, 7, 8, 0]
+ test: [2, 7, 1, 8, 6, 5, 3, 4, 0]
+swap at steps: 6
+to be swap: [0, 7]
+[[2, 7, 1], [8, 6, 5], [3, 4, 0]] [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
+无解
+进入强制交换
+After being swapped: [4, 7, 1, 8, 6, 5, 3, 2, 0]
+(ai)temp_IN: 18
+搜索中：
+搜索成功，循环次数： 820
+第 1 步： MoveLeft 启发值为： 1 + 18
+[4, 7, 1]
+[8, 6, 5]
+[3, 0, 2]
+第 2 步： MoveUp 启发值为： 2 + 20
+[4, 7, 1]
+[8, 0, 5]
+[3, 6, 2]
+第 3 步： MoveUp 启发值为： 3 + 20
+[4, 0, 1]
+[8, 7, 5]
+[3, 6, 2]
+第 4 步： MoveRight 启发值为： 4 + 18
+[4, 1, 0]
+[8, 7, 5]
+[3, 6, 2]
+第 5 步： MoveDown 启发值为： 5 + 18
+[4, 1, 5]
+[8, 7, 0]
+[3, 6, 2]
+第 6 步： MoveDown 启发值为： 6 + 16
+[4, 1, 5]
+[8, 7, 2]
+[3, 6, 0]
+第 7 步： MoveLeft 启发值为： 7 + 16
+[4, 1, 5]
+[8, 7, 2]
+[3, 0, 6]
+第 8 步： MoveLeft 启发值为： 8 + 16
+[4, 1, 5]
+[8, 7, 2]
+[0, 3, 6]
+第 9 步： MoveUp 启发值为： 9 + 16
+[4, 1, 5]
+[0, 7, 2]
+[8, 3, 6]
+第 10 步： MoveRight 启发值为： 10 + 14
+[4, 1, 5]
+[7, 0, 2]
+[8, 3, 6]
+第 11 步： MoveDown 启发值为： 11 + 12
+[4, 1, 5]
+[7, 3, 2]
+[8, 0, 6]
+第 12 步： MoveLeft 启发值为： 12 + 12
+[4, 1, 5]
+[7, 3, 2]
+[0, 8, 6]
+第 13 步： MoveUp 启发值为： 13 + 12
+[4, 1, 5]
+[0, 3, 2]
+[7, 8, 6]
+第 14 步： MoveUp 启发值为： 14 + 12
+[0, 1, 5]
+[4, 3, 2]
+[7, 8, 6]
+第 15 步： MoveRight 启发值为： 15 + 10
+[1, 0, 5]
+[4, 3, 2]
+[7, 8, 6]
+第 16 步： MoveRight 启发值为： 16 + 8
+[1, 5, 0]
+[4, 3, 2]
+[7, 8, 6]
+第 17 步： MoveDown 启发值为： 17 + 6
+[1, 5, 2]
+[4, 3, 0]
+[7, 8, 6]
+第 18 步： MoveLeft 启发值为： 18 + 6
+[1, 5, 2]
+[4, 0, 3]
+[7, 8, 6]
+第 19 步： MoveUp 启发值为： 19 + 6
+[1, 0, 2]
+[4, 5, 3]
+[7, 8, 6]
+第 20 步： MoveRight 启发值为： 20 + 4
+[1, 2, 0]
+[4, 5, 3]
+[7, 8, 6]
+第 21 步： MoveDown 启发值为： 21 + 2
+[1, 2, 3]
+[4, 5, 0]
+[7, 8, 6]
+第 22 步： MoveDown 启发值为： 22 + 0
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+['a', 'w', 'w', 'd', 's', 's', 'a', 'a', 'w', 'd', 's', 'a', 'w', 'w', 'd', 'd', 's', 'a', 'w', 'd', 's', 's']
+{"uuid": "b9b347c977a745a3a81cb0d8fac572b9", "answer": {"operations": "awwdssaawdsawwddsawdss", "swap": [1, 8]}}
+{"answer":"H","score":false,"time":0.7343630790710449}
+
+
+Process finished with exit code 0
+
+
+C:\Users\Breeze\AppData\Local\Programs\Python\Python37\python.exe C:/Users/Breeze/Desktop/soft_engi/Eight_puzzle/eightPuzzle/utils.py
+get test image successfully
+saved to :  ./test.png
+67.72969382716049
+275
+The original image is :  ./child\X_\_sub6.png
+./imgsClipped/test/
+(900, 900)
+./imgsClipped/_sub6/
+(900, 900)
+./imgsClipped/test\1.jpg
+./imgsClipped/test\2.jpg
+./imgsClipped/test\3.jpg
+./imgsClipped/test\4.jpg
+./imgsClipped/test\5.jpg
+./imgsClipped/test\6.jpg
+./imgsClipped/test\7.jpg
+./imgsClipped/test\8.jpg
+./imgsClipped/test\9.jpg
+./imgsClipped/_sub6\1.jpg
+./imgsClipped/_sub6\2.jpg
+./imgsClipped/_sub6\3.jpg
+./imgsClipped/_sub6\4.jpg
+./imgsClipped/_sub6\5.jpg
+./imgsClipped/_sub6\6.jpg
+./imgsClipped/_sub6\7.jpg
+./imgsClipped/_sub6\8.jpg
+./imgsClipped/_sub6\9.jpg
+orig:  [1, 2, 3, 4, 5, 0, 6, 7, 8]
+ test: [3, 7, 5, 6, 4, 0, 8, 2, 1]
+swap at steps: 19
+to be swap: [3, 1]
+[[3, 7, 5], [6, 4, 0], [8, 2, 1]] [[1, 2, 3], [4, 5, 0], [6, 7, 8]]
+搜索成功，循环次数： 3956
+第 1 步： MoveDown 启发值为： 1 + 16
+[3, 7, 5]
+[6, 4, 1]
+[8, 2, 0]
+第 2 步： MoveLeft 启发值为： 2 + 18
+[3, 7, 5]
+[6, 4, 1]
+[8, 0, 2]
+第 3 步： MoveLeft 启发值为： 3 + 18
+[3, 7, 5]
+[6, 4, 1]
+[0, 8, 2]
+第 4 步： MoveUp 启发值为： 4 + 20
+[3, 7, 5]
+[0, 4, 1]
+[6, 8, 2]
+第 5 步： MoveRight 启发值为： 5 + 18
+[3, 7, 5]
+[4, 0, 1]
+[6, 8, 2]
+第 6 步： MoveRight 启发值为： 6 + 16
+[3, 7, 5]
+[4, 1, 0]
+[6, 8, 2]
+第 7 步： MoveDown 启发值为： 7 + 14
+[3, 7, 5]
+[4, 1, 2]
+[6, 8, 0]
+第 8 步： MoveLeft 启发值为： 8 + 16
+[3, 7, 5]
+[4, 1, 2]
+[6, 0, 8]
+第 9 步： MoveLeft 启发值为： 9 + 16
+[3, 7, 5]
+[4, 1, 2]
+[0, 6, 8]
+第 10 步： MoveUp 启发值为： 10 + 18
+[3, 7, 5]
+[0, 1, 2]
+[4, 6, 8]
+第 11 步： MoveRight 启发值为： 11 + 16
+[3, 7, 5]
+[1, 0, 2]
+[4, 6, 8]
+第 12 步： MoveUp 启发值为： 12 + 16
+[3, 0, 5]
+[1, 7, 2]
+[4, 6, 8]
+第 13 步： MoveLeft 启发值为： 13 + 16
+[0, 3, 5]
+[1, 7, 2]
+[4, 6, 8]
+第 14 步： MoveDown 启发值为： 14 + 14
+[1, 3, 5]
+[0, 7, 2]
+[4, 6, 8]
+第 15 步： MoveDown 启发值为： 15 + 12
+[1, 3, 5]
+[4, 7, 2]
+[0, 6, 8]
+第 16 步： MoveRight 启发值为： 16 + 12
+[1, 3, 5]
+[4, 7, 2]
+[6, 0, 8]
+第 17 步： MoveUp 启发值为： 17 + 12
+[1, 3, 5]
+[4, 0, 2]
+[6, 7, 8]
+第 18 步： MoveRight 启发值为： 18 + 10
+[1, 3, 5]
+[4, 2, 0]
+[6, 7, 8]
+[[1, 3, 5], [4, 2, 0], [6, 7, 8]]
+After being swapped:
+[[1, 4, 5], [3, 2, 0], [6, 7, 8]]
+[1, 4, 5, 3, 2, 6, 7, 8] [1, 2, 3, 4, 5, 6, 7, 8]
+5 0
+正在交换：
+After being swapped BY HAND
+[[1, 4, 3], [5, 2, 0], [6, 7, 8]]
+搜索成功，循环次数： 822
+第 1 步： MoveUp 启发值为： 1 + 12
+[1, 4, 0]
+[5, 2, 3]
+[6, 7, 8]
+第 2 步： MoveLeft 启发值为： 2 + 14
+[1, 0, 4]
+[5, 2, 3]
+[6, 7, 8]
+第 3 步： MoveDown 启发值为： 3 + 12
+[1, 2, 4]
+[5, 0, 3]
+[6, 7, 8]
+第 4 步： MoveLeft 启发值为： 4 + 12
+[1, 2, 4]
+[0, 5, 3]
+[6, 7, 8]
+第 5 步： MoveUp 启发值为： 5 + 14
+[0, 2, 4]
+[1, 5, 3]
+[6, 7, 8]
+第 6 步： MoveRight 启发值为： 6 + 14
+[2, 0, 4]
+[1, 5, 3]
+[6, 7, 8]
+第 7 步： MoveRight 启发值为： 7 + 12
+[2, 4, 0]
+[1, 5, 3]
+[6, 7, 8]
+第 8 步： MoveDown 启发值为： 8 + 10
+[2, 4, 3]
+[1, 5, 0]
+[6, 7, 8]
+第 9 步： MoveLeft 启发值为： 9 + 12
+[2, 4, 3]
+[1, 0, 5]
+[6, 7, 8]
+第 10 步： MoveUp 启发值为： 10 + 12
+[2, 0, 3]
+[1, 4, 5]
+[6, 7, 8]
+第 11 步： MoveLeft 启发值为： 11 + 12
+[0, 2, 3]
+[1, 4, 5]
+[6, 7, 8]
+第 12 步： MoveDown 启发值为： 12 + 10
+[1, 2, 3]
+[0, 4, 5]
+[6, 7, 8]
+第 13 步： MoveRight 启发值为： 13 + 8
+[1, 2, 3]
+[4, 0, 5]
+[6, 7, 8]
+第 14 步： MoveRight 启发值为： 14 + 6
+[1, 2, 3]
+[4, 5, 0]
+[6, 7, 8]
+['s', 'a', 'a', 'w', 'd', 'd', 's', 'a', 'a', 'w', 'd', 'w', 'a', 's', 's', 'd', 'w', 'd', 'w', 'a', 's', 'a', 'w', 'd', 'd', 's', 'a', 'w', 'a', 's', 'd', 'd']
+{"uuid": "1bd0fa25efe64c679851f6e2824f7e6a", "answer": {"operations": "saawddsaawdwassdwdwasawddsawasdd", "swap": [3, 4]}}
+{"answer":"X","score":false,"time":1.562816858291626}
+
+
+Process finished with exit code 0

@@ -1,8 +1,7 @@
 import numpy as np
 import operator
+from utils import getSequence
 O = 3
-A = list(input("请输入初始状态："))
-B = list(input("请输入目标状态："))
 z = 0
 M = np.zeros((O, O))
 N = np.zeros((O, O))
@@ -79,7 +78,10 @@ def printpath(f):
 
 
 if __name__ == '__main__':
-
+    # A = list('280157634')
+    # B = list('123045678')
+    A = list(input("请输入初始状态："))
+    B = list(input("请输入目标状态："))
     for i in range(O):
         for j in range(O):
             M[i][j] = A[z]

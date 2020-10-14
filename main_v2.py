@@ -1,176 +1,88 @@
-import sys
-import random
-from enum import IntEnum
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QLabel, QWidget, QApplication, QGridLayout, QMessageBox
-from PyQt5.QtGui import QFont, QPalette
-from PyQt5.QtCore import Qt
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from tkinter import *
+import hashlib
+import time
+
+LOG_LINE_NUM = 0
 
 
-# 用枚举类表示方向
-class Direction(IntEnum):
-    UP = 0
-    DOWN = 1
-    LEFT = 2
-    RIGHT = 3
+class MY_GUI():
+    def __init__(self, init_window_name):
+        self.init_window_name = init_window_name
 
+    # 设置窗口
+    def set_init_window(self):
+        self.init_window_name.title("文本处理工具_v1.2")  # 窗口名
+        # self.init_window_name.geometry('320x160+10+10')                         #290 160为窗口大小，+10 +10 定义窗口弹出时的默认展示位置
+        self.init_window_name.geometry('1068x681+10+10')
+        # self.init_window_name["bg"] = "pink"
+        # #窗口背景色，其他背景色见：blog.csdn.net/chl0000/article/details/7657887 self.init_window_name.attributes("-alpha",
+        # 0.9)                          #虚化，值越小虚化程度越高 标签
+        self.init_data_label = Label(self.init_window_name, text="待处理数据")
+        self.init_data_label.grid(row=0, column=0)
+        self.result_data_label = Label(self.init_window_name, text="输出结果")
+        self.result_data_label.grid(row=0, column=12)
+        self.log_label = Label(self.init_window_name, text="日志")
+        self.log_label.grid(row=12, column=0)
+        # 文本框
+        self.init_data_Text = Text(self.init_window_name, width=67, height=35)  # 原始数据录入框
+        self.init_data_Text.grid(row=1, column=0, rowspan=10, columnspan=10)
+        self.result_data_Text = Text(self.init_window_name, width=70, height=49)  # 处理结果展示
+        self.result_data_Text.grid(row=1, column=12, rowspan=15, columnspan=10)
+        self.log_data_Text = Text(self.init_window_name, width=66, height=9)  # 日志框
+        self.log_data_Text.grid(row=13, column=0, columnspan=10)
+        # 按钮
+        self.str_trans_to_md5_button = Button(self.init_window_name, text="字符串转MD5", bg="lightblue", width=10,
+                                              command=self.str_trans_to_md5)  # 调用内部方法  加()为直接调用
+        self.str_trans_to_md5_button.grid(row=1, column=11)
 
-class NumberHuaRong(QWidget):
-    """ 华容道主体 """
-
-    def __init__(self):
-        super().__init__()
-        self.blocks = []
-        self.zero_row = 0
-        self.zero_column = 0
-        self.gltMain = QGridLayout()
-
-        self.initUI()
-
-    def initUI(self):
-        # 设置方块间隔
-        self.gltMain.setSpacing(10)
-
-        self.onInit()
-
-        # 设置布局
-        self.setLayout(self.gltMain)
-        # 设置宽和高
-        self.setFixedSize(400, 400)
-        # 设置标题
-        self.setWindowTitle('wx数字华容道')
-        # 设置背景颜色
-        l1 = QtWidgets.QLabel(self)
-        # self.setStyleSheet("background-color:yellow;")
-        png = QtGui.QPixmap('C:\\Users\\Breeze\\Desktop\\shopBoard_detection\\AdvancedEAST-master\\demo\\001.png')
-        l1.setPixmap(png)
-        l1.move(100, 40)
-        l1.setGeometry(10, 10, 120, 120)
-        self.show()
-
-    # 初始化布局
-    def onInit(self):
-        # 产生顺序数组
-        self.numbers = list(range(0, 9))
-        self.numbers.append(0)
-        print(self.numbers)
-        # 将数字添加到二维数组
-        for row in range(3):
-            self.blocks.append([])
-            for column in range(3):
-                temp = self.numbers[row * 3 + column]
-                # print("temp:{}".format(temp))
-                if temp == 0:
-                    self.zero_row = row
-                    self.zero_column = column
-                self.blocks[row].append(temp)
-        print("self.blocks:{}".format(self.blocks))
-        print(self.zero_column,self.zero_row)
-        # 打乱数组
-        for i in range(500):
-            random_num = random.randint(0, 3)
-            self.move(Direction(random_num))
-
-        self.updatePanel()
-
-    # 检测按键
-    def keyPressEvent(self, event):
-        key = event.key()
-        if key == Qt.Key_Up or key == Qt.Key_W:
-            self.move(Direction.UP)
-        if key == Qt.Key_Down or key == Qt.Key_S:
-            self.move(Direction.DOWN)
-        if key == Qt.Key_Left or key == Qt.Key_A:
-            self.move(Direction.LEFT)
-        if key == Qt.Key_Right or key == Qt.Key_D:
-            self.move(Direction.RIGHT)
-        self.updatePanel()
-        if self.checkResult():
-            if QMessageBox.Ok == QMessageBox.information(self, '挑战结果', '恭喜您完成挑战！'):
-                self.onInit()
-
-    # 方块移动算法
-    def move(self, direction):
-        if direction == Direction.UP:  # 上
-            if self.zero_row != 2:
-                self.blocks[self.zero_row][self.zero_column] = self.blocks[self.zero_row + 1][self.zero_column]
-                self.blocks[self.zero_row + 1][self.zero_column] = 0
-                self.zero_row += 1
-        if direction == Direction.DOWN:  # 下
-            if self.zero_row != 0:
-                self.blocks[self.zero_row][self.zero_column] = self.blocks[self.zero_row - 1][self.zero_column]
-                self.blocks[self.zero_row - 1][self.zero_column] = 0
-                self.zero_row -= 1
-        if direction == Direction.LEFT:  # 左
-            if self.zero_column != 2:
-                self.blocks[self.zero_row][self.zero_column] = self.blocks[self.zero_row][self.zero_column + 1]
-                self.blocks[self.zero_row][self.zero_column + 1] = 0
-                self.zero_column += 1
-        if direction == Direction.RIGHT:  # 右
-            if self.zero_column != 0:
-                self.blocks[self.zero_row][self.zero_column] = self.blocks[self.zero_row][self.zero_column - 1]
-                self.blocks[self.zero_row][self.zero_column - 1] = 0
-                self.zero_column -= 1
-
-    def updatePanel(self):
-        for row in range(3):
-            for column in range(3):
-                self.gltMain.addWidget(Block(self.blocks[row][column]), row, column)
-
-        self.setLayout(self.gltMain)
-
-    # 检测是否完成
-    def checkResult(self):
-        # 先检测最右下角是否为0
-        if self.blocks[2][2] != 0:
-            return False
-
-        for row in range(3):
-            for column in range(3):
-                # 运行到此处说名最右下角已经为0，pass即可
-                if row == 2 and column == 2:
-                    pass
-                # 值是否对应
-                elif self.blocks[row][column] != row * 3 + column + 1:
-                    return False
-
-        return True
-
-
-class Block(QLabel):
-    """ 数字方块 """
-
-    def __init__(self, number):
-        super().__init__()
-
-        self.number = number
-        self.setFixedSize(80, 80)
-
-        # 设置字体
-        font = QFont()
-        font.setPointSize(30)
-        font.setBold(True)
-        self.setFont(font)
-
-        # 设置字体颜色
-        pa = QPalette()
-        pa.setColor(QPalette.WindowText, Qt.white)
-        self.setPalette(pa)
-
-        # 设置文字位置
-        self.setAlignment(Qt.AlignCenter)
-
-        # 设置背景颜色
-        if self.number == 0:
-            self.setStyleSheet("background-color:white;border-radius: 20%;")
+    # 功能函数
+    def str_trans_to_md5(self):
+        src = self.init_data_Text.get(1.0, END).strip().replace("\n", "").encode()
+        # print("src =",src)
+        if src:
+            try:
+                myMd5 = hashlib.md5()
+                myMd5.update(src)
+                myMd5_Digest = myMd5.hexdigest()
+                # print(myMd5_Digest)
+                # 输出到界面
+                self.result_data_Text.delete(1.0, END)
+                self.result_data_Text.insert(1.0, myMd5_Digest)
+                self.write_log_to_Text("INFO:str_trans_to_md5 success")
+            except:
+                self.result_data_Text.delete(1.0, END)
+                self.result_data_Text.insert(1.0, "字符串转MD5失败")
         else:
-            self.setStyleSheet("background-color:blue;border-radius: 20%;")
-            self.setText(str(self.number))
+            self.write_log_to_Text("ERROR:str_trans_to_md5 failed")
+
+    # 获取当前时间
+    def get_current_time(self):
+        current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+        return current_time
+
+    # 日志动态打印
+    def write_log_to_Text(self, logmsg):
+        global LOG_LINE_NUM
+        current_time = self.get_current_time()
+        logmsg_in = str(current_time) + " " + str(logmsg) + "\n"  # 换行
+        if LOG_LINE_NUM <= 7:
+            self.log_data_Text.insert(END, logmsg_in)
+            LOG_LINE_NUM = LOG_LINE_NUM + 1
+        else:
+            self.log_data_Text.delete(1.0, 2.0)
+            self.log_data_Text.insert(END, logmsg_in)
 
 
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    ex = NumberHuaRong()
-    sys.exit(app.exec_())
+def gui_start():
+    init_window = Tk()  # 实例化出一个父窗口
+    ZMJ_PORTAL = MY_GUI(init_window)
+    # 设置根窗口默认属性
+    ZMJ_PORTAL.set_init_window()
+
+    init_window.mainloop()  # 父窗口进入事件循环，可以理解为保持窗口运行，否则界面不展示
 
 
+gui_start()
