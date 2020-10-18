@@ -213,8 +213,9 @@ def produceChildImg():
 
 
 # if __name__ == '__main__':
-def getSequence():
-    step, swap, uuid = interfaceJson('test')
+def getSequence(flag, step=0, swap=None, uuid=""):
+    if not flag:
+        step, swap, uuid = interfaceJson('test')
     testIndex = countImg('./test.png')
     # origImgPath -> ./child\A_ (2)\_sub7.png
     origImgPath = str(mapped(testIndex))
@@ -226,28 +227,6 @@ def getSequence():
 
     testBlocks = count("./imgsClipped/test")
     origBlocks = count('./imgsClipped/' + str(origImgPath).split('\\')[-1].split('.')[0])
-    # zero = testBlocks.index(255)
-    # # 在返回的时候不能简单编号，因为"0"必须在空白处
-    # res = []
-    # for item in origBlocks:
-    #     res.append(str(testBlocks.index(item)))
-    #
-    # org = [i for i in '012345678']
-    # temp = org[zero]
-    # org[zero] = '0'
-    # org[0] = temp
-    # # org : ['2', '1', '0', '3', '4', '5', '6', '7', '8']
-    # # print(org)
-    #
-    # ta = res.index('0')
-    # tb = res.index(temp)
-    # res[ta] = temp
-    # res[tb] = '0'
-    # print(res)
-    # packUp = [''.join(org), ''.join(res)]
-    # print(packUp)
-
-    # ----------------------------------
     origT = []
     testT = []
     cnt = 1
@@ -260,8 +239,6 @@ def getSequence():
     # print(origT)
     for item in testBlocks:
         testT.append(origT[origBlocks.index(item)])
-    # print(testT)
-    # packUp = [''.join([str(i) for i in origT]), ''.join([str(j) for j in testT])]
     print("orig: ", origT, '\n', "test:", testT)
     print("swap at steps:", step)
     swap[0] -= 1
@@ -292,7 +269,7 @@ def post(uuid, operation, swap):
 
 
 if __name__ == '__main__':
-    origT, testT, step, swap, uuid = getSequence()
+    origT, testT, step, swap, uuid = getSequence(0)
     o = np.array(origT).reshape(3, 3)
     t = np.array(testT).reshape(3, 3)
     o = list(o.tolist())

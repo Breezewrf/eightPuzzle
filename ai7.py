@@ -379,7 +379,6 @@ def _main():
             node = node.parent
 
 
-
 def func(init_state, goal_state):
     init_ = list(np.array(init_state).reshape(9).tolist())
     goal_ = list(np.array(goal_state).reshape(9).tolist())
@@ -394,7 +393,7 @@ def func(init_state, goal_state):
         init_state, swapped = finestSwap(init_state)
         print("After being swapped BY HAND")
         print(init_state)
-    else :
+    else:
         swapped = [-1, -1]
     node, count = AStar(init_state, goal_state)
     if node is None:
@@ -443,10 +442,6 @@ def finestSwap(state):
         temp[item[1]] = t
         swappedState.append(list(np.array(temp).reshape(3, 3).tolist()))
     # print(swappedState)
-    dele = [[2, 3],[3, 2], [5, 6],[6, 5], []]
-    for i in swappedState:
-        if i == [2, 3] or i == [3, 2] or i == [5, 6] or i == [6, 5]:
-            swappedState.remove(i)
     distances = []
     for swapped in swappedState:
         distances.append(GetDistance(swapped, goal_state))
