@@ -579,3 +579,506 @@ After being swapped BY HAND
 
 
 Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------------------------
+C:\Users\Breeze\AppData\Local\Programs\Python\Python37\python.exe C:/Users/Breeze/Desktop/soft_engi/Eight_puzzle/eightPuzzle/interface.py
+{'author': 39, 'challengercount': 107, 'pubtimestamp': 1602864025.0, 'records': 26, 'uuid': '321a5671-8bfa-4664-8986-fc7a413fa540'}
+{'author': 13, 'challengercount': 50, 'pubtimestamp': 1602864491.0, 'records': 24, 'uuid': 'eb1efa71-b0a5-4410-8c94-343130ea7ed8'}
+{'author': 41, 'challengercount': 51, 'pubtimestamp': 1602864579.0, 'records': 24, 'uuid': 'cab476c9-2c84-4271-8e7a-a0c0f8066e6a'}
+{'author': 8, 'challengercount': 40, 'pubtimestamp': 1602864751.0, 'records': 24, 'uuid': 'ab4d090a-d014-46c8-add4-2ab8754a6a1a'}
+{'author': 57, 'challengercount': 35, 'pubtimestamp': 1602864947.0, 'records': 25, 'uuid': '0ccbcda0-2d4d-4d21-b0b5-9fbb3133615c'}
+{'author': 34, 'challengercount': 40, 'pubtimestamp': 1602864971.0, 'records': 25, 'uuid': '4c902ab0-4403-43dc-8872-fb1bbed5c99d'}
+{'author': 18, 'challengercount': 34, 'pubtimestamp': 1602865014.0, 'records': 24, 'uuid': 'dc180805-bf96-419f-922a-0baeb2ff48a1'}
+{'author': 27, 'challengercount': 41, 'pubtimestamp': 1602865308.0, 'records': 24, 'uuid': '999d9af8-2144-4662-90e4-5c085874b623'}
+{'author': 22, 'challengercount': 36, 'pubtimestamp': 1602895476.0, 'records': 24, 'uuid': 'ee9820eb-ca6c-495a-b127-1dd2d8183775'}
+{'author': 52, 'challengercount': 39, 'pubtimestamp': 1602896109.0, 'records': 21, 'uuid': '5a30e0cf-ad0c-46cc-a127-bc425795c466'}
+{'author': 37, 'challengercount': 35, 'pubtimestamp': 1602896227.0, 'records': 27, 'uuid': '5cbe1ab1-0ed4-46e1-b2bc-f9ef665ead5f'}
+{'author': 48, 'challengercount': 37, 'pubtimestamp': 1602898046.0, 'records': 24, 'uuid': 'b95f6e5f-e2ee-4133-918d-6400f9668f53'}
+{'author': 38, 'challengercount': 37, 'pubtimestamp': 1602898135.0, 'records': 30, 'uuid': 'f2715f3f-ab7c-4121-8cbc-c2995f746f8c'}
+{'author': 54, 'challengercount': 43, 'pubtimestamp': 1602899741.0, 'records': 25, 'uuid': '9d168706-1947-4d6b-9200-0b18938d9de0'}
+{'author': 55, 'challengercount': 33, 'pubtimestamp': 1602900969.0, 'records': 25, 'uuid': '466ccf2d-1647-43f4-b399-bfa1d740360b'}
+{'author': 40, 'challengercount': 34, 'pubtimestamp': 1602901047.0, 'records': 24, 'uuid': '20c9578d-90a4-417a-a67e-0d2405e6e0a8'}
+{'author': 53, 'challengercount': 34, 'pubtimestamp': 1602901148.0, 'records': 26, 'uuid': '885a654f-c857-45d0-8db8-18a0d1fa6e01'}
+{'author': 35, 'challengercount': 32, 'pubtimestamp': 1602903523.0, 'records': 25, 'uuid': '39470681-4742-449f-9f14-60c4d1e25be5'}
+{'author': 46, 'challengercount': 39, 'pubtimestamp': 1602905772.0, 'records': 34, 'uuid': '082cabb6-e227-4dbb-b5c6-680a1e45cd1a'}
+{'author': 43, 'challengercount': 34, 'pubtimestamp': 1602906149.0, 'records': 25, 'uuid': 'e52166e8-2d6a-4516-85a2-2921146f9869'}
+{'author': 10, 'challengercount': 32, 'pubtimestamp': 1602907077.0, 'records': 24, 'uuid': '909962b8-4934-45d8-9fc8-887795c302e3'}
+{'author': 36, 'challengercount': 38, 'pubtimestamp': 1602909350.0, 'records': 23, 'uuid': '1d6882f8-3d67-489d-9640-ecb93258caad'}
+{'author': 21, 'challengercount': 32, 'pubtimestamp': 1602909466.0, 'records': 22, 'uuid': '440b7d14-3dae-4056-88e4-ae028c59e3cf'}
+{'author': 50, 'challengercount': 34, 'pubtimestamp': 1602909759.0, 'records': 24, 'uuid': '50780842-410d-492b-a728-cb8287abaaa1'}
+{'author': 16, 'challengercount': 29, 'pubtimestamp': 1602915195.0, 'records': 26, 'uuid': '7e30954b-a17f-48f8-998a-c72e05dfb923'}
+{'author': 26, 'challengercount': 32, 'pubtimestamp': 1602918935.0, 'records': 22, 'uuid': 'bd567636-c6e3-4680-85a3-eecc90b37950'}
+{'author': 20, 'challengercount': 30, 'pubtimestamp': 1602919417.0, 'records': 29, 'uuid': 'c542811d-4d1f-4408-af89-129cf6813153'}
+{'author': 60, 'challengercount': 43, 'pubtimestamp': 1602921327.0, 'records': 23, 'uuid': 'cbc7a355-f385-4a4c-801c-da845f785336'}
+{'author': 44, 'challengercount': 29, 'pubtimestamp': 1602921700.0, 'records': 23, 'uuid': '313fe672-a8f3-4092-830e-45c7842a492e'}
+{'author': 3, 'challengercount': 31, 'pubtimestamp': 1602922012.0, 'records': 21, 'uuid': '0c4f4015-617a-4d81-89bd-012544d08ea5'}
+{'author': 25, 'challengercount': 24, 'pubtimestamp': 1602926712.0, 'records': 19, 'uuid': 'bb6ad649-5c04-489a-8b35-6132a754bafc'}
+{'author': 29, 'challengercount': 23, 'pubtimestamp': 1602927360.0, 'records': 20, 'uuid': '5bdf8204-44c2-4b84-a7bc-4abad5b99728'}
+{'author': 23, 'challengercount': 21, 'pubtimestamp': 1602927644.0, 'records': 18, 'uuid': 'f44c333a-da9a-4159-aef4-ff1f3c5acc04'}
+{'author': 7, 'challengercount': 25, 'pubtimestamp': 1602927702.0, 'records': 20, 'uuid': '4ed5529e-c497-4304-9488-f2d89a5b9dc4'}
+{'author': 32, 'challengercount': 27, 'pubtimestamp': 1602928338.0, 'records': 24, 'uuid': 'c8a568df-2481-411c-9718-bff7e2e84e62'}
+{'author': 19, 'challengercount': 23, 'pubtimestamp': 1602929581.0, 'records': 20, 'uuid': 'df7bd8a2-15ec-4c3b-8ac6-0217ec2aa47f'}
+{'author': 12, 'challengercount': 24, 'pubtimestamp': 1602930245.0, 'records': 19, 'uuid': 'd7c41d3f-1c7e-491a-9191-1a4f19d72a68'}
+{'author': 30, 'challengercount': 16, 'pubtimestamp': 1602938743.0, 'records': 15, 'uuid': 'd32d1e3e-aa69-4e80-b127-67d0758affe2'}
+{'author': 28, 'challengercount': 14, 'pubtimestamp': 1602940677.0, 'records': 13, 'uuid': '913a1ef1-04fa-4071-a5bd-05aa05b8eb22'}
+{'author': 42, 'challengercount': 12, 'pubtimestamp': 1602941068.0, 'records': 11, 'uuid': '58eaadce-8c56-4290-8d12-83f61930fa19'}
+{'author': 58, 'challengercount': 3, 'pubtimestamp': 1602942880.0, 'records': 3, 'uuid': '302bbd1d-b54e-4fdf-91a3-c609221ebcb5'}
+今日还剩挑战次数：50
+get test image successfully
+saved to :  ./test.png
+63.99110987654321
+11
+The original image is :  ./child\A_ (2)\_sub3.png
+./imgsClipped/test/
+(900, 900)
+./imgsClipped/_sub3/
+(900, 900)
+./imgsClipped/test\1.jpg
+./imgsClipped/test\2.jpg
+./imgsClipped/test\3.jpg
+./imgsClipped/test\4.jpg
+./imgsClipped/test\5.jpg
+./imgsClipped/test\6.jpg
+./imgsClipped/test\7.jpg
+./imgsClipped/test\8.jpg
+./imgsClipped/test\9.jpg
+./imgsClipped/_sub3\1.jpg
+./imgsClipped/_sub3\2.jpg
+./imgsClipped/_sub3\3.jpg
+./imgsClipped/_sub3\4.jpg
+./imgsClipped/_sub3\5.jpg
+./imgsClipped/_sub3\6.jpg
+./imgsClipped/_sub3\7.jpg
+./imgsClipped/_sub3\8.jpg
+./imgsClipped/_sub3\9.jpg
+orig:  [1, 2, 0, 3, 4, 5, 6, 7, 8]
+ test: [7, 8, 5, 4, 6, 1, 3, 2, 0]
+swap at steps: 7
+to be swap: [1, 3]
+[[7, 8, 5], [4, 6, 1], [3, 2, 0]] [[1, 2, 0], [3, 4, 5], [6, 7, 8]]
+无解
+进入强制交换
+After being swapped: [7, 4, 5, 8, 6, 1, 3, 2, 0]
+(ai)temp_IN: 20
+搜索中：
+搜索成功，循环次数： 79555
+第 1 步： MoveLeft 启发值为： 1 + 20
+[7, 4, 5]
+[8, 6, 1]
+[3, 0, 2]
+第 2 步： MoveUp 启发值为： 2 + 22
+[7, 4, 5]
+[8, 0, 1]
+[3, 6, 2]
+第 3 步： MoveLeft 启发值为： 3 + 22
+[7, 4, 5]
+[0, 8, 1]
+[3, 6, 2]
+第 4 步： MoveDown 启发值为： 4 + 20
+[7, 4, 5]
+[3, 8, 1]
+[0, 6, 2]
+第 5 步： MoveRight 启发值为： 5 + 20
+[7, 4, 5]
+[3, 8, 1]
+[6, 0, 2]
+第 6 步： MoveUp 启发值为： 6 + 20
+[7, 4, 5]
+[3, 0, 1]
+[6, 8, 2]
+第 7 步： MoveUp 启发值为： 7 + 20
+[7, 0, 5]
+[3, 4, 1]
+[6, 8, 2]
+第 8 步： MoveLeft 启发值为： 8 + 22
+[0, 7, 5]
+[3, 4, 1]
+[6, 8, 2]
+第 9 步： MoveDown 启发值为： 9 + 20
+[3, 7, 5]
+[0, 4, 1]
+[6, 8, 2]
+第 10 步： MoveRight 启发值为： 10 + 18
+[3, 7, 5]
+[4, 0, 1]
+[6, 8, 2]
+第 11 步： MoveUp 启发值为： 11 + 18
+[3, 0, 5]
+[4, 7, 1]
+[6, 8, 2]
+第 12 步： MoveRight 启发值为： 12 + 16
+[3, 5, 0]
+[4, 7, 1]
+[6, 8, 2]
+第 13 步： MoveDown 启发值为： 13 + 14
+[3, 5, 1]
+[4, 7, 0]
+[6, 8, 2]
+第 14 步： MoveDown 启发值为： 14 + 12
+[3, 5, 1]
+[4, 7, 2]
+[6, 8, 0]
+第 15 步： MoveLeft 启发值为： 15 + 14
+[3, 5, 1]
+[4, 7, 2]
+[6, 0, 8]
+第 16 步： MoveUp 启发值为： 16 + 14
+[3, 5, 1]
+[4, 0, 2]
+[6, 7, 8]
+第 17 步： MoveUp 启发值为： 17 + 14
+[3, 0, 1]
+[4, 5, 2]
+[6, 7, 8]
+第 18 步： MoveRight 启发值为： 18 + 12
+[3, 1, 0]
+[4, 5, 2]
+[6, 7, 8]
+第 19 步： MoveDown 启发值为： 19 + 10
+[3, 1, 2]
+[4, 5, 0]
+[6, 7, 8]
+第 20 步： MoveLeft 启发值为： 20 + 12
+[3, 1, 2]
+[4, 0, 5]
+[6, 7, 8]
+第 21 步： MoveLeft 启发值为： 21 + 14
+[3, 1, 2]
+[0, 4, 5]
+[6, 7, 8]
+第 22 步： MoveUp 启发值为： 22 + 16
+[0, 1, 2]
+[3, 4, 5]
+[6, 7, 8]
+第 23 步： MoveRight 启发值为： 23 + 14
+[1, 0, 2]
+[3, 4, 5]
+[6, 7, 8]
+第 24 步： MoveRight 启发值为： 24 + 12
+[1, 2, 0]
+[3, 4, 5]
+[6, 7, 8]
+['a', 'w', 'a', 's', 'd', 'w', 'w', 'a', 's', 'd', 'w', 'd', 's', 's', 'a', 'w', 'w', 'd', 's', 'a', 'a', 'w', 'd', 'd']
+{"uuid": "a6dcabab-0289-4221-85d4-8414ac94e2b9", "teamid": 56, "token": "c5b0346e-1a39-43d1-86e2-b643fd15c818", "answer": {"operations": "awasdwwasdwdssawwdsaawdd", "swap": [2, 4]}}
+{"owner":56,"rank":-1,"step":-1,"success":false,"timeelapsed":280275}
+
+
+Process finished with exit code 0
+=======================================================================================================================
+C:\Users\Breeze\AppData\Local\Programs\Python\Python37\python.exe C:/Users/Breeze/Desktop/soft_engi/Eight_puzzle/eightPuzzle/interface.py
+{'author': 53, 'challengercount': 14, 'pubtimestamp': 1602950525.0, 'records': 9, 'uuid': '7d8a94d9-193b-48d4-a0a7-9145781c40a3'}
+{'author': 34, 'challengercount': 6, 'pubtimestamp': 1602950572.0, 'records': 6, 'uuid': 'e8aaf981-7ba1-4d36-b80e-a6a16debe587'}
+{'author': 52, 'challengercount': 5, 'pubtimestamp': 1602950782.0, 'records': 4, 'uuid': '0bc744c7-63d2-4a1a-b375-632ec4657f77'}
+{'author': 31, 'challengercount': 4, 'pubtimestamp': 1602950785.0, 'records': 3, 'uuid': 'e1b611a4-eeb8-42c8-8a95-be927d19f4ca'}
+{'author': 35, 'challengercount': 5, 'pubtimestamp': 1602951300.0, 'records': 2, 'uuid': '2058903f-1dad-4cb0-a720-7d7d460d6ac6'}
+{'author': 33, 'challengercount': 3, 'pubtimestamp': 1602951853.0, 'records': 1, 'uuid': '8b3e056e-3b03-4236-97d6-0da546b8dfc8'}
+{'author': 27, 'challengercount': 3, 'pubtimestamp': 1602951900.0, 'records': 3, 'uuid': 'ae39a052-3a75-40cb-858c-bd6de923ff83'}
+{'author': 13, 'challengercount': 2, 'pubtimestamp': 1602952950.0, 'records': 1, 'uuid': 'f5d7f5ce-3350-44c6-b065-3c8d53a5f144'}
+{'author': 57, 'challengercount': 2, 'pubtimestamp': 1602954354.0, 'records': 1, 'uuid': 'a928cbd7-eb15-48a0-b0b3-802f512d3702'}
+{'author': 60, 'challengercount': 5, 'pubtimestamp': 1602982323.0, 'records': 0, 'uuid': 'b2651dd0-baa0-43d0-a4a5-0c99ce75b1b0'}
+{'author': 41, 'challengercount': 0, 'pubtimestamp': 1602982681.0, 'records': 0, 'uuid': 'a9dc884d-3126-4882-92db-ef0880c4186d'}
+{'author': 19, 'challengercount': 1, 'pubtimestamp': 1602984203.0, 'records': 0, 'uuid': 'aa59960a-982c-46f1-9daa-086a03acaa36'}
+{'author': 29, 'challengercount': 1, 'pubtimestamp': 1602984301.0, 'records': 0, 'uuid': 'a21176b7-d3e9-4bd6-a386-819a78e582e2'}
+{'author': 54, 'challengercount': 1, 'pubtimestamp': 1602984416.0, 'records': 0, 'uuid': 'd33fbc6f-831b-4ecc-9372-982994da1a46'}
+今日还剩挑战次数：53
+get test image successfully
+saved to :  ./test.png
+67.51524444444445
+322
+The original image is :  ./child\z_ (2)\_sub8.png
+./imgsClipped/test/
+(900, 900)
+./imgsClipped/_sub8/
+(900, 900)
+./imgsClipped/test\1.jpg
+./imgsClipped/test\2.jpg
+./imgsClipped/test\3.jpg
+./imgsClipped/test\4.jpg
+./imgsClipped/test\5.jpg
+./imgsClipped/test\6.jpg
+./imgsClipped/test\7.jpg
+./imgsClipped/test\8.jpg
+./imgsClipped/test\9.jpg
+./imgsClipped/_sub8\1.jpg
+./imgsClipped/_sub8\2.jpg
+./imgsClipped/_sub8\3.jpg
+./imgsClipped/_sub8\4.jpg
+./imgsClipped/_sub8\5.jpg
+./imgsClipped/_sub8\6.jpg
+./imgsClipped/_sub8\7.jpg
+./imgsClipped/_sub8\8.jpg
+./imgsClipped/_sub8\9.jpg
+orig:  [1, 2, 3, 4, 5, 6, 7, 0, 8]
+ test: [2, 1, 8, 4, 6, 7, 3, 5, 0]
+swap at steps: 6
+to be swap: [0, 7]
+[[2, 1, 8], [4, 6, 7], [3, 5, 0]] [[1, 2, 3], [4, 5, 6], [7, 0, 8]]
+无解
+进入强制交换
+After being swapped: [5, 1, 8, 4, 6, 7, 3, 2, 0]
+(ai)temp_IN: 16
+搜索中：
+搜索成功，循环次数： 419
+第 1 步： MoveLeft 启发值为： 1 + 18
+[5, 1, 8]
+[4, 6, 7]
+[3, 0, 2]
+第 2 步： MoveLeft 启发值为： 2 + 18
+[5, 1, 8]
+[4, 6, 7]
+[0, 3, 2]
+第 3 步： MoveUp 启发值为： 3 + 20
+[5, 1, 8]
+[0, 6, 7]
+[4, 3, 2]
+第 4 步： MoveUp 启发值为： 4 + 20
+[0, 1, 8]
+[5, 6, 7]
+[4, 3, 2]
+第 5 步： MoveRight 启发值为： 5 + 18
+[1, 0, 8]
+[5, 6, 7]
+[4, 3, 2]
+第 6 步： MoveDown 启发值为： 6 + 18
+[1, 6, 8]
+[5, 0, 7]
+[4, 3, 2]
+第 7 步： MoveDown 启发值为： 7 + 16
+[1, 6, 8]
+[5, 3, 7]
+[4, 0, 2]
+第 8 步： MoveRight 启发值为： 8 + 14
+[1, 6, 8]
+[5, 3, 7]
+[4, 2, 0]
+第 9 步： MoveUp 启发值为： 9 + 14
+[1, 6, 8]
+[5, 3, 0]
+[4, 2, 7]
+第 10 步： MoveUp 启发值为： 10 + 14
+[1, 6, 0]
+[5, 3, 8]
+[4, 2, 7]
+第 11 步： MoveLeft 启发值为： 11 + 14
+[1, 0, 6]
+[5, 3, 8]
+[4, 2, 7]
+第 12 步： MoveDown 启发值为： 12 + 12
+[1, 3, 6]
+[5, 0, 8]
+[4, 2, 7]
+第 13 步： MoveDown 启发值为： 13 + 10
+[1, 3, 6]
+[5, 2, 8]
+[4, 0, 7]
+第 14 步： MoveRight 启发值为： 14 + 8
+[1, 3, 6]
+[5, 2, 8]
+[4, 7, 0]
+第 15 步： MoveUp 启发值为： 15 + 8
+[1, 3, 6]
+[5, 2, 0]
+[4, 7, 8]
+第 16 步： MoveUp 启发值为： 16 + 8
+[1, 3, 0]
+[5, 2, 6]
+[4, 7, 8]
+第 17 步： MoveLeft 启发值为： 17 + 8
+[1, 0, 3]
+[5, 2, 6]
+[4, 7, 8]
+第 18 步： MoveDown 启发值为： 18 + 6
+[1, 2, 3]
+[5, 0, 6]
+[4, 7, 8]
+第 19 步： MoveLeft 启发值为： 19 + 6
+[1, 2, 3]
+[0, 5, 6]
+[4, 7, 8]
+第 20 步： MoveDown 启发值为： 20 + 4
+[1, 2, 3]
+[4, 5, 6]
+[0, 7, 8]
+第 21 步： MoveRight 启发值为： 21 + 2
+[1, 2, 3]
+[4, 5, 6]
+[7, 0, 8]
+['a', 'a', 'w', 'w', 'd', 's', 's', 'd', 'w', 'w', 'a', 's', 's', 'd', 'w', 'w', 'a', 's', 'a', 's', 'd']
+{"uuid": "9ec4300d-2c58-409b-8aaa-b949aa114e06", "teamid": 56, "token": "c5b0346e-1a39-43d1-86e2-b643fd15c818", "answer": {"operations": "aawwdssdwwassdwwasasd", "swap": [1, 8]}}
+{"owner":56,"rank":-1,"step":-1,"success":false,"timeelapsed":1010}
+
+
+Process finished with exit code 0
+==============================================================================================================
+C:\Users\Breeze\AppData\Local\Programs\Python\Python37\python.exe C:/Users/Breeze/Desktop/soft_engi/Eight_puzzle/eightPuzzle/interface.py
+{'author': 53, 'challengercount': 15, 'pubtimestamp': 1602950525.0, 'records': 9, 'uuid': '7d8a94d9-193b-48d4-a0a7-9145781c40a3'}
+{'author': 34, 'challengercount': 6, 'pubtimestamp': 1602950572.0, 'records': 6, 'uuid': 'e8aaf981-7ba1-4d36-b80e-a6a16debe587'}
+{'author': 52, 'challengercount': 7, 'pubtimestamp': 1602950782.0, 'records': 5, 'uuid': '0bc744c7-63d2-4a1a-b375-632ec4657f77'}
+{'author': 31, 'challengercount': 5, 'pubtimestamp': 1602950785.0, 'records': 4, 'uuid': 'e1b611a4-eeb8-42c8-8a95-be927d19f4ca'}
+{'author': 35, 'challengercount': 7, 'pubtimestamp': 1602951300.0, 'records': 4, 'uuid': '2058903f-1dad-4cb0-a720-7d7d460d6ac6'}
+{'author': 33, 'challengercount': 5, 'pubtimestamp': 1602951853.0, 'records': 3, 'uuid': '8b3e056e-3b03-4236-97d6-0da546b8dfc8'}
+{'author': 27, 'challengercount': 6, 'pubtimestamp': 1602951900.0, 'records': 5, 'uuid': 'ae39a052-3a75-40cb-858c-bd6de923ff83'}
+{'author': 13, 'challengercount': 4, 'pubtimestamp': 1602952950.0, 'records': 3, 'uuid': 'f5d7f5ce-3350-44c6-b065-3c8d53a5f144'}
+{'author': 57, 'challengercount': 4, 'pubtimestamp': 1602954354.0, 'records': 3, 'uuid': 'a928cbd7-eb15-48a0-b0b3-802f512d3702'}
+{'author': 60, 'challengercount': 7, 'pubtimestamp': 1602982323.0, 'records': 2, 'uuid': 'b2651dd0-baa0-43d0-a4a5-0c99ce75b1b0'}
+{'author': 41, 'challengercount': 2, 'pubtimestamp': 1602982681.0, 'records': 2, 'uuid': 'a9dc884d-3126-4882-92db-ef0880c4186d'}
+{'author': 19, 'challengercount': 2, 'pubtimestamp': 1602984203.0, 'records': 1, 'uuid': 'aa59960a-982c-46f1-9daa-086a03acaa36'}
+{'author': 29, 'challengercount': 3, 'pubtimestamp': 1602984301.0, 'records': 2, 'uuid': 'a21176b7-d3e9-4bd6-a386-819a78e582e2'}
+{'author': 54, 'challengercount': 3, 'pubtimestamp': 1602984416.0, 'records': 2, 'uuid': 'd33fbc6f-831b-4ecc-9372-982994da1a46'}
+今日还剩挑战次数：52
+get test image successfully
+saved to :  ./test.png
+62.219793827160494
+42
+The original image is :  ./child\c_\_sub7.png
+./imgsClipped/test/
+(900, 900)
+./imgsClipped/_sub7/
+(900, 900)
+./imgsClipped/test\1.jpg
+./imgsClipped/test\2.jpg
+./imgsClipped/test\3.jpg
+./imgsClipped/test\4.jpg
+./imgsClipped/test\5.jpg
+./imgsClipped/test\6.jpg
+./imgsClipped/test\7.jpg
+./imgsClipped/test\8.jpg
+./imgsClipped/test\9.jpg
+./imgsClipped/_sub7\1.jpg
+./imgsClipped/_sub7\2.jpg
+./imgsClipped/_sub7\3.jpg
+./imgsClipped/_sub7\4.jpg
+./imgsClipped/_sub7\5.jpg
+./imgsClipped/_sub7\6.jpg
+./imgsClipped/_sub7\7.jpg
+./imgsClipped/_sub7\8.jpg
+./imgsClipped/_sub7\9.jpg
+orig:  [1, 2, 3, 4, 5, 6, 0, 7, 8]
+ test: [7, 5, 8, 4, 0, 1, 6, 3, 2]
+swap at steps: 10
+to be swap: [1, 4]
+[[7, 5, 8], [4, 0, 1], [6, 3, 2]] [[1, 2, 3], [4, 5, 6], [0, 7, 8]]
+无解
+进入强制交换
+After being swapped: [7, 0, 8, 4, 5, 1, 6, 3, 2]
+(ai)temp_IN: 21
+强制交换后无解，进入手动交换
+[7, 8, 4, 5, 1, 6, 3, 2] [1, 2, 3, 4, 5, 6, 7, 8]
+21 0
+正在交换：
+After being swapped BY HAND
+[[7, 0, 8], [4, 5, 6], [1, 3, 2]]
+搜索成功，循环次数： 16792
+第 1 步： MoveRight 启发值为： 1 + 14
+[7, 8, 0]
+[4, 5, 6]
+[1, 3, 2]
+第 2 步： MoveDown 启发值为： 2 + 14
+[7, 8, 6]
+[4, 5, 0]
+[1, 3, 2]
+第 3 步： MoveDown 启发值为： 3 + 12
+[7, 8, 6]
+[4, 5, 2]
+[1, 3, 0]
+第 4 步： MoveLeft 启发值为： 4 + 12
+[7, 8, 6]
+[4, 5, 2]
+[1, 0, 3]
+第 5 步： MoveUp 启发值为： 5 + 14
+[7, 8, 6]
+[4, 0, 2]
+[1, 5, 3]
+第 6 步： MoveLeft 启发值为： 6 + 16
+[7, 8, 6]
+[0, 4, 2]
+[1, 5, 3]
+第 7 步： MoveDown 启发值为： 7 + 14
+[7, 8, 6]
+[1, 4, 2]
+[0, 5, 3]
+第 8 步： MoveRight 启发值为： 8 + 14
+[7, 8, 6]
+[1, 4, 2]
+[5, 0, 3]
+第 9 步： MoveUp 启发值为： 9 + 16
+[7, 8, 6]
+[1, 0, 2]
+[5, 4, 3]
+第 10 步： MoveUp 启发值为： 10 + 16
+[7, 0, 6]
+[1, 8, 2]
+[5, 4, 3]
+第 11 步： MoveLeft 启发值为： 11 + 18
+[0, 7, 6]
+[1, 8, 2]
+[5, 4, 3]
+第 12 步： MoveDown 启发值为： 12 + 16
+[1, 7, 6]
+[0, 8, 2]
+[5, 4, 3]
+第 13 步： MoveDown 启发值为： 13 + 14
+[1, 7, 6]
+[5, 8, 2]
+[0, 4, 3]
+第 14 步： MoveRight 启发值为： 14 + 12
+[1, 7, 6]
+[5, 8, 2]
+[4, 0, 3]
+第 15 步： MoveUp 启发值为： 15 + 12
+[1, 7, 6]
+[5, 0, 2]
+[4, 8, 3]
+第 16 步： MoveUp 启发值为： 16 + 12
+[1, 0, 6]
+[5, 7, 2]
+[4, 8, 3]
+第 17 步： MoveRight 启发值为： 17 + 12
+[1, 6, 0]
+[5, 7, 2]
+[4, 8, 3]
+第 18 步： MoveDown 启发值为： 18 + 10
+[1, 6, 2]
+[5, 7, 0]
+[4, 8, 3]
+第 19 步： MoveDown 启发值为： 19 + 8
+[1, 6, 2]
+[5, 7, 3]
+[4, 8, 0]
+第 20 步： MoveLeft 启发值为： 20 + 10
+[1, 6, 2]
+[5, 7, 3]
+[4, 0, 8]
+第 21 步： MoveUp 启发值为： 21 + 10
+[1, 6, 2]
+[5, 0, 3]
+[4, 7, 8]
+第 22 步： MoveUp 启发值为： 22 + 10
+[1, 0, 2]
+[5, 6, 3]
+[4, 7, 8]
+第 23 步： MoveRight 启发值为： 23 + 8
+[1, 2, 0]
+[5, 6, 3]
+[4, 7, 8]
+第 24 步： MoveDown 启发值为： 24 + 6
+[1, 2, 3]
+[5, 6, 0]
+[4, 7, 8]
+第 25 步： MoveLeft 启发值为： 25 + 6
+[1, 2, 3]
+[5, 0, 6]
+[4, 7, 8]
+第 26 步： MoveLeft 启发值为： 26 + 6
+[1, 2, 3]
+[0, 5, 6]
+[4, 7, 8]
+第 27 步： MoveDown 启发值为： 27 + 4
+[1, 2, 3]
+[4, 5, 6]
+[0, 7, 8]
+['d', 's', 's', 'a', 'w', 'a', 's', 'd', 'w', 'w', 'a', 's', 's', 'd', 'w', 'w', 'd', 's', 's', 'a', 'w', 'w', 'd', 's', 'a', 'a', 's']
+{"uuid": "6c451c98-cfbc-4eb6-9f7d-65632b6639f5", "teamid": 56, "token": "c5b0346e-1a39-43d1-86e2-b643fd15c818", "answer": {"operations": "dssawasdwwassdwwdssawwdsaas", "swap": [6, 7]}}
+{"owner":56,"rank":-1,"step":-1,"success":false,"timeelapsed":11568}
+
+
+Process finished with exit code 0

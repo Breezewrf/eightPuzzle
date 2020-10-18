@@ -273,7 +273,7 @@ if __name__ == '__main__':
     # mmap = dict(zip(['MoveUp', 'MoveLeft', 'MoveDown', 'MoveRight'], ['w', 'a', 's', 'd']))
     # res = [mmap[i] for i in _main()]
     # print(res)
-    process, _ = ai([0, 7, 4, 1, 8, 6, 2, 5, 3], [1, 2, 3, 4, 0, 5, 6, 7, 8], [0, 1], 19)
+    process, _ = ai([1, 2, 3, 0, 4, 5, 6, 7, 8], [1, 2, 3, 4, 0, 5, 6, 7, 8], [0, 1], 9)
     mmap = dict(zip(['MoveUp', 'MoveLeft', 'MoveDown', 'MoveRight'], ['w', 'a', 's', 'd']))
     res = [mmap[i] for i in process]
     print(res)
