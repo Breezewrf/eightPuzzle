@@ -46,7 +46,7 @@ def calDistance(node, w):
         if node[i] == 0:
             continue
         dis += abs(i // w - (node[i] - 1) // w) + abs(i % w - (node[i] - 1) % w)
-    return 0
+    return dis
 
 
 # A*算法寻找初始状态到目标状态的路径
@@ -272,7 +272,7 @@ if __name__ == '__main__':
     # mmap = dict(zip(['MoveUp', 'MoveLeft', 'MoveDown', 'MoveRight'], ['w', 'a', 's', 'd']))
     # res = [mmap[i] for i in _main()]
     # print(res)
-    process, _ = ai([1, 2, 3, 0, 4, 5, 6, 7, 8], [1, 2, 3, 4, 0, 5, 6, 7, 8], [0, 1], 9)
+    process, _, _t= ai([1, 8, 3, 0, 4, 5, 6, 7, 2], [1, 2, 3, 4, 0, 5, 6, 7, 8], [0, 1], 3)
     mmap = dict(zip(['MoveUp', 'MoveLeft', 'MoveDown', 'MoveRight'], ['w', 'a', 's', 'd']))
     res = [mmap[i] for i in process]
     print(res)
