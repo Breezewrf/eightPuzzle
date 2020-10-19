@@ -1,5 +1,5 @@
 ---
-name: why #####
+name: why/how/what/where #####
 about: ask question
 ---
 
