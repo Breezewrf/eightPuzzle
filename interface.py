@@ -138,7 +138,16 @@ def showTeamDetail(teamId):
     api = "/api/teamdetail/"
     Url = url + api + str(teamId)
     re = requests.get(Url)
-    print(re.text)
+    te = eval(re.text)
+    print("当前排名：{}".format(te["rank"]))
+    print("当前总得分{}".format(te['score']))
+    print("一共通过了{}道题目".format(len(te["success"])))
+    for i in te["success"]:
+        print(i)
+
+    print("一共失败了{}次".format(len(te['fail'])))
+    for i in te["fail"]:
+        print(i)
 
 
 def showProblem(teamId):
@@ -153,8 +162,8 @@ if __name__ == '__main__':
     # showQuiz()
     # print("-------------------------------------")
     # showProblem(56)
-    # showRecod("218ba788-b0a3-45d0-86b5-33b0e03e13c2")
+    # showRecod("05cddeb2-010b-47c9-8289-fababbec0e83")
     # create()
-    # fight("7d8a94d9-193b-48d4-a0a7-9145781c40a3")
+    # fight("954dae96-5f4f-4f3c-a09c-3119da0f5e9a")
     showRankList()
     # showTeamDetail(56)
