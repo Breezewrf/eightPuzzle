@@ -10,7 +10,7 @@
 
 - [x] .gitignore
 - [x] Commit信息（需要有意义的提交信息占比90%）
-- [ ] 使用分支管理提交代码，使用pull request
+- [x] 使用分支管理提交代码，使用pull request
 - [x] 开源协议
 - [ ] 持续集成
 - [x] Issues模板
@@ -31,7 +31,7 @@
 
 ./PK 目录下的为大比拼所用到的文件
 
-```python
+```
 │  ai7.py  -- 初始的ai算法，速度较慢
 │  ai9.py  -- 改进后的ai算法，采用优先队列
 		    - 提供接口函数ai(initState, goalState, swap, step)以便大比拼调用
