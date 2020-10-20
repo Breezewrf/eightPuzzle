@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from PIL import Image
 
-path = "./imgsSrc/"
+path = "../imgsSrc/"
 toPath = './imgsClipped/'
 boxes = [(0, 0, 300, 300), (300, 0, 600, 300), (600, 0, 900, 300),
          (0, 300, 300, 600), (300, 300, 600, 600), (600, 300, 900, 600),
