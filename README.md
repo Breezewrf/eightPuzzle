@@ -2,11 +2,11 @@
 </div>
 
 # <font color=#43C size=8 face="黑体">eightPuzzle</font>
-- [ ] README
+- [x] README
   - [x] 徽章（可以是使用的语言或者其他）
   - [x] 运行环境
-  - [ ] 编译方法
-  - [ ] 使用方法
+  - [x] 编译方法
+  - [x] 使用方法
 
 - [x] .gitignore
 - [x] Commit信息（需要有意义的提交信息占比90%）
